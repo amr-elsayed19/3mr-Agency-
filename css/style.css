@@ -1,0 +1,901 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li{
+    list-style: none;}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+/* start header */
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #f9f6f6ae;
+    position: fixed;
+    overflow: auto;
+    z-index: 100;
+}
+.header img{
+    width: 50px;
+    margin-top: 6px;
+}
+.header ul{
+    overflow: auto;
+    margin-top: 18px;
+    float: right;
+}
+.header ul li{
+    float: left;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.header ul li::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 174, 255);
+    transition: 0.5s;
+}
+.header ul li:hover::before{
+    width: 100%;
+}
+.header ul li a{
+    color: rgb(14, 119, 168);
+    transition: 0.5s;
+}
+.header ul li:hover a{
+    color: rgb(42, 184, 250);
+}
+/* end header */
+
+/* start land */
+.land{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background-image: url(../imgs/landing-image.png);
+}
+.land .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(109, 193, 232, 0.7);
+    text-align: center;
+    position: relative;
+}
+.land .overlay .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.land .overlay .text h1{
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.land .overlay .text p{
+    color: #ede6e6;
+    text-transform: capitalize;
+}
+.land .overlay .buttons{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.land .overlay .buttons button{
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    margin: 0 4px;
+}
+.land .overlay .buttons .wh{
+    background-color: white;
+    transition: 0.5s;
+}
+.land .overlay .buttons .wh:hover{
+    background-color: rgb(44, 123, 159);
+}
+.land .overlay .buttons .wh:hover a{
+    color: white;
+}
+.land .overlay .buttons .wh a{
+    color: rgb(0, 174, 255);
+}
+.land .overlay .buttons .bl{
+    background-color: rgb(0, 174, 255);
+    transition: 0.5s;
+}
+.land .overlay .buttons .bl a{
+    color: white;
+}
+.land .overlay .buttons .bl:hover{
+    background-color: rgb(224, 227, 227);
+}
+.land .overlay .buttons .bl:hover a{
+    color: rgb(0, 174, 255);
+}
+/* end land */
+/* start welcome */
+.welcome{
+    margin: 50px 0;
+}
+.welcome h2{
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.welcome h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.welcome .sections{
+    overflow: auto;
+    margin-top: 30px;
+}
+.welcome .sections .section{
+    position: relative;
+    float: left;
+    width: 30%;
+    text-align: center;
+    border: 2px solid rgb(0, 174, 255);
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+.welcome .sections .section::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(109, 193, 232, 0.7);
+    transition: 0.5s;
+    z-index: -1;
+}
+.welcome .sections .section:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.welcome .sections .mar{
+    margin: 0 5%;
+}
+.welcome .sections .section i{
+    font-size: 20px;
+    color: rgb(42, 184, 250);
+    margin-bottom: 20px;
+}
+.welcome .sections .section h3{
+    font-size: 18px;
+    font-weight: 500;margin-bottom: 10px;
+    color: #383838;
+}
+.welcome .sections .section p{
+    color: #818181;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.welcome .sections .section p strong{
+    color: rgb(14, 119, 168);
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.welcome .sections .section p em{
+    font-size: 17px;
+    color: rgb(44, 123, 159);
+    font-weight: 400;
+}
+.welcome .sections .section a{
+    color: rgb(0, 174, 255);
+    border: 1px solid #8d8d8d;
+    border-radius: 5px;
+    padding: 5px 10px;
+} 
+.welcome .sections .section a:hover{
+    color: #8d8d8d;
+    border-color: rgb(0, 174, 255);
+}
+/* end welcome */
+/* start fetures */
+.fetures{
+    margin: 50px 0;
+    background-color: hwb(0 93% 7%);
+    padding: 50px 0;
+    position: relative;
+}
+.fetures h2{
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.fetures h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.fetures .fit{
+    width: 100%;
+    overflow: auto;
+    margin-top: 30px;
+}
+.fetures .fit .feture{
+    float: right;
+    width: 32%;
+    height: 400px;
+    margin: 10px 0;
+    position: relative;
+    transition: visability 0.5s;
+}
+.fetures .fit .mid{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.fetures .fit .feture img{
+    width: 94%;
+    height: 94%;
+    position: absolute;
+}
+.fetures .fit .feture .contetnt{
+    background-color: #8d8d8d7e;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -3%;
+    left: 47%;
+    transform: translate(-50%);
+    text-align: center;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+.fetures .fit .feture .contetnt .cont{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fetures .fit .feture .contetnt .cont h3{
+    color: rgb(14, 119, 168);
+    font-size: 20px;
+}
+.fetures .fit .feture .contetnt .cont p{
+    padding: 0 50px;
+    margin: 15px 0;
+    color: #fbfbfb;
+    transition: 1s;
+}
+.fetures .fit .feture .contetnt .cont .icons{
+    color: white;
+    font-size: 15px;
+}
+.fetures .fit .feture .contetnt .cont .icons i{
+    padding: 10px;
+    background-color: rgb(14, 119, 168);
+    cursor: pointer;
+    transition: 1s;
+}
+.fetures .fit .feture .contetnt .cont .icons i:hover{
+    color: rgb(11, 90, 127);
+    background-color: white;
+}
+.fetures .fit .feture:hover .contetnt .cont p{
+    margin: 10px 0;
+}
+.fetures .fit .feture:hover .contetnt{
+    visibility: visible;
+    opacity: 1;
+}
+/* end fetures */
+/* start offers  */
+.offers{
+    margin: 50px 0;
+}
+.offers h2{
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.offers h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.offers .offers-section{
+    overflow: auto;
+    margin-top: 30px;
+}
+.offers .offers-section .offer{
+    padding: 20px ;
+    border: 2px solid rgb(0, 174, 255);
+    width: 30%;
+    height: 120px;
+    position: relative;
+    float: left;
+    border-radius: 10px;
+    margin: 20px;
+}
+.offers .offers-section .offer::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(109, 193, 232, 0.7);
+    transition: 0.5s;
+    z-index: -1;
+}
+.offers .offers-section .offer:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.offers .offers-section .offer i{
+    position: absolute;
+    float: left;
+    font-size: 20px;
+    color: rgb(42, 184, 250);
+    margin-top : 20px;
+    transition: 0.5s;
+}
+.offers .offers-section .offer:hover i{
+    color: white;
+}
+.offers .offers-section .offer .text{
+    position: absolute;
+    float: right;
+    margin-left: 50px;
+}
+.offers .offers-section .offer h3{
+    font-size: 18px;
+    font-weight: 500;margin-bottom: 10px;
+    color: #383838;
+}
+.offers .offers-section .offer p{
+    color: #818181;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+/* end offers  */
+/* start about  */
+.about{
+    margin-top: 50px;
+    background-color: hwb(0 93% 7%);
+    height: 500px;
+}
+.about .section{
+    overflow: auto;
+    padding: 50px 0;
+}
+.about .section .text{
+    float: left;
+    width: 60%;
+}
+.about .section .text h2{
+    margin: 30px 0;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+.about .section .text h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.about .section .text > p{
+    color: #818181;
+    margin-bottom: 30px;
+}
+.about .section .text .checks{
+    overflow: auto;
+    margin: 6px 0;
+}
+.about .section .text .checks i{
+    float: left;
+    margin-right: 14px;
+    margin-top: 6px;
+    color: rgb(0, 174, 255);
+}
+.about .section .text .checks p{
+    float: left;
+    color: #3f3f3f;
+}
+.about .section .imgs{
+    float: left;
+    width: 40%;
+    position: relative;
+}
+.about .section .imgs{
+    margin: auto;
+}
+.about .section .imgs .bollets{
+    text-align: center;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.about .section .imgs .bollets span{
+    display: inline-block;
+    margin: 0 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(70, 180, 231);
+    transition: 0.2s;
+}
+.about .section .imgs .bollets .active{
+    background-color: rgb(11, 90, 127);
+}
+.about .section .imgs .bollets span:hover{
+    background-color: rgb(11, 90, 127);
+    cursor: pointer;
+}
+/* end about  */
+/* start members  */
+.members{
+    background-image: url(../imgs/members.jpg);
+    background-attachment: fixed;
+}
+.members .overlay{
+    text-align: center;
+    background-color: rgb(109, 193, 232, 0.7);
+}
+.members .overlay .section{
+    padding: 100px 30px;
+    overflow: auto;
+}
+.members .overlay .section .member{
+    float: left;
+    text-align: center;
+    width: 25%;
+}
+.members .overlay .section .member i{
+    font-size: 25px;
+    color: white;
+}
+.members .overlay .section .member h3{
+    color: white;
+    margin: 8px 0;
+}
+.members .overlay .section .member p{
+    color: white;
+}
+/* end members  */
+/* start pricing  */
+.pricing{
+    margin: 50px 0;
+}
+.pricing h2{
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.pricing h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.pricing .boxes{
+    overflow: auto;
+}
+.pricing .boxes .box{
+    margin: 30px 0;
+    float: left;
+    text-align: center;
+    width: 25%;
+    padding: 20px 10px;
+    border: 2px solid rgb(0, 174, 255);
+    border-radius: 10px;
+    position: relative;
+}
+.pricing .boxes .box::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(109, 193, 232, 0.3);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.pricing .boxes .box:hover::after{
+    height: 100%;
+}
+.pricing .boxes .mid{
+    margin: 30px 12.5%;
+}
+.pricing .boxes .box h3{
+    text-transform: capitalize;
+    color: rgb(0, 174, 255);
+}
+.pricing .boxes .box .circle{
+    margin: 10px auto;
+    text-align: center;
+    padding: 6px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 174, 255);
+    
+}
+.pricing .boxes .box .circle h4{
+    color: rgb(0, 174, 255);
+    margin-bottom: -5px;
+}
+.pricing .boxes .box p{
+    margin: 10px 0;
+    color: #383838;
+
+}
+.pricing .boxes .box button{
+    padding: 6px 10px;
+    border: 1px solid rgb(14, 119, 168);
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.pricing .boxes .box button:hover{
+    background-color: rgb(14, 119, 168);
+}
+.pricing .boxes .box button:hover a{
+    color: white;
+}
+.pricing .boxes .box button a{
+    color: #383838;
+}
+/* end pricing  */
+/* start admin */
+.admin{
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../imgs/admin.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.admin .overlay{
+    padding: 60px;
+    width: 100%;
+    background-color: rgb(109, 193, 232, 0.7);
+}
+.admin .overlay .section{
+    overflow: auto;
+}
+.admin .overlay .section .data{
+    float: left;
+    width: 40%;
+    margin: 0 5%;
+}
+.admin .overlay .section .data .image{
+    overflow: auto;
+    margin-bottom: 15px;
+}
+.admin .overlay .section .data .image img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid #383838;
+    float: left;
+    margin-right: 20px;
+}
+.admin .overlay .section .data .image .text{
+    float: left;
+    margin-top: 5px;
+}
+.admin .overlay .section .data .image .text h3{
+    color: rgb(11, 90, 127);
+}
+.admin .overlay .section .data .image .text p{
+    color: rgb(243, 244, 244);
+}
+.admin .overlay .section .data p{
+    width: 300px;
+    color: #181818;
+    margin-bottom: 15px;
+}
+.admin .overlay .section .data .icons i{
+    color: rgb(11, 90, 127);
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: 0.5s;
+}
+.admin .overlay .section .data .icons i:hover{
+    color: white;
+}
+/* end admin */
+/* start team */
+.our-teams{
+    margin: 50px 0;
+}
+.our-teams h2{
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.our-teams h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.our-teams .teams{
+    overflow: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.our-teams .teams .team{
+    float: left;
+    width: 25%;
+    background-color: hwb(0 93% 7%);
+    padding: 20px;
+    position: relative;
+}
+.our-teams .teams .mid{
+    margin: 0 12.5%;
+}
+.our-teams .teams .team img{
+    width: 100%;
+}
+.our-teams .teams .team h3{
+    margin-top: 10px;
+    color: rgb(11, 90, 127);
+}
+.our-teams .teams .team p{
+    margin-top: 10px;
+    color: rgb(0, 174, 255);
+}
+.our-teams .teams .team .overlay{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: 1s;
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 100;
+    background-color: rgba(109, 193, 232, 0.3);
+}
+.our-teams .teams .team .overlay i{
+    color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    background-color: rgb(11, 90, 127);
+    cursor: pointer;
+    transition: 2s;
+}
+.our-teams .teams .team .overlay i:hover{
+    background-color: #8d8d8d;
+}
+.our-teams .teams .team:hover .overlay{
+    visibility: visible;
+    opacity: 1;
+}
+/* end team */
+/* start news */
+.news{
+    margin: 50px 0;
+    background-color: hwb(0 93% 7%);
+    padding-top: 80px;
+}
+.news h2{
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+.news h2::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    height: 3px;
+    transform: translateX(-50%);
+    background-color: rgb(0, 174, 255);
+}
+.news .sections{
+    margin-top: 50px;
+    overflow: auto;
+    background-color: hwb(0 91% 15%);
+    text-align: center;
+    position: relative;
+}
+.news .sections .new{
+    width: 30%;
+    float: right;
+    padding: 20px;
+    background-color: hwb(0 93% 7%);
+    position: relative;
+    transition: 1s;
+    transition-delay: 1s
+}
+.news .sections .new::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: hwb(0 86% 14% / 0.38);
+    transition: 1s;
+}
+.news .sections .new:hover::after{
+    border-bottom: 1px solid rgb(0, 174, 255);
+    height: 100%;
+}
+.news .sections .new:hover{
+    border-bottom: 1px solid rgb(11, 90, 127);
+}
+.news .sections .mid{
+    margin: 0 5%;
+}
+.news .sections .new img{
+    width: 100%;
+}
+.news .sections .new .times{
+    overflow: auto;
+    margin: 10px 0;
+}
+.news .sections .new .times .time{
+    float: left;
+    margin: 0 5px;
+}
+.news .sections .new .times .time i{
+    font-size: 12px;
+    color: rgb(0, 174, 255);
+}
+.news .sections .new .times .time span{
+    font-size: 12px;
+    color: rgb(11, 90, 127);
+}
+.news .sections .new h3{
+    color: rgb(11, 90, 127);
+}
+.news .sections .new p{
+    margin: 10px 0;
+    color: rgb(0, 174, 255);
+}
+.news .sections .mid p{
+    height: 43.5px;
+}
+.news .sections .new a{
+    display: inline-block;
+    border: 1px solid rgb(11, 90, 127);
+    border-radius: 6px;
+    padding: 5px 10px;
+    color: rgb(0, 174, 255);
+    z-index: 10;
+}
+/* end news */
+/* start footer  */
+.footer{
+    margin-top: 50px;
+    padding: 60px 0;
+    text-align: center;
+}
+.footer img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.footer .icons a{
+    display: inline-block;
+    background-color: rgb(0, 174, 255);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 3px;transition: 0.5s;
+}
+.footer .icons .fc:hover{
+    background-color: rgb(0, 64, 148);
+}
+.footer .icons .insta:hover{
+    background-color: rgb(117, 13, 67);
+}
+.footer .icons .twt:hover{
+    background-color: rgb(14, 107, 230);
+}
+.footer .icons .link:hover{
+    background-color: rgb(79, 147, 237);
+}
+.footer .icons .git:hover{
+    background-color: rgb(10, 16, 24);
+}
+.footer .icons .font:hover{
+    background-color: rgb(218, 206, 76);
+}
+.footer .icons a i{
+    color: white;
+    font-size: 20px;
+}
+.footer p{
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: rgb(44, 123, 159);
+}
+/* end footer  */
+
+/* main color = rgb(0, 174, 255) 
+second color =  rgb(14, 119, 168)
+p span color = #818181 
+background-color: hwb(0 93% 7%);
+*/
